@@ -1,8 +1,9 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.jpg">
+      <p style="color: white">{{ count }}  </p>
     <div class="buttons">
-      <ui-button raised>Gérez les photos</ui-button>
+      <ui-button raised @click="increment()">Gérez les photos</ui-button>
           <router-link to="/about"><ui-button raised>Gérez les catégories</ui-button>
 </router-link>
 
@@ -17,6 +18,17 @@
 
 export default {
   name: 'Home',
+  data() {
+    return{
+      count: 0,
+
+    }
+  },
+  methods: {
+    increment() {
+      this.count += 1;
+    }
+  },
   components: {
   }
 }
