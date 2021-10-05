@@ -1,11 +1,11 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.jpg">
-      <p style="color: white">{{ count }}  </p>
+      <p style="color: white">{{ count }} </p>
     <div class="buttons">
-      <ui-button raised @click="increment()">Gérez les photos</ui-button>
-          <router-link to="/about"><ui-button raised>Gérez les catégories</ui-button>
-</router-link>
+          <router-link to="/photos"><ui-button raised @click="increment()">Gérez les photos</ui-button></router-link>
+          <router-link to="/about"><ui-button raised>Gérez les catégories</ui-button></router-link>
+
 
     </div>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
@@ -13,8 +13,10 @@
 </template>
 
 <script>
+
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+
 
 export default {
   name: 'Home',
@@ -29,9 +31,23 @@ export default {
       this.count += 1;
     }
   },
+  computed: {
+        photos () {
+
+      return this.$store.state.photos;
+
+    }
+
+  },
+    mounted() {
+    this.$store.dispatch("getPhotos");
+  },
+
   components: {
   }
 }
+
+
 </script>
 
 <style scoped>
