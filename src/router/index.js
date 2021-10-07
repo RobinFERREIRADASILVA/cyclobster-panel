@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Photos from '../views/Photos.vue'
+import Upload from '../views/Upload.vue'
+
 
 const routes = [
   {
@@ -12,6 +14,11 @@ const routes = [
     path: '/photos',
     name: 'Photos',
     component: Photos
+  },
+  {
+    path: '/upload',
+    name: 'Upload',
+    component: Upload
   },
   {
     path: '/about',

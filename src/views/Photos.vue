@@ -5,7 +5,7 @@
           
           <div class="card-picture">
               <div class="img-section">
-                <img :src="require(`../assets/images/${photo.picture}`)" />
+                <!-- <img :src="require(`../assets/images/${photo.picture}`)" /> -->
               </div>
           </div>
           <p>{{ photo.picture }}</p>
@@ -54,7 +54,6 @@ export default {
 <style scoped>
     .photos-wrapper {
         color: white;
-
     }
 
     .card {

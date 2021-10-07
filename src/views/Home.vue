@@ -5,7 +5,7 @@
     <div class="buttons">
           <router-link to="/photos"><ui-button raised @click="increment()">Gérez les photos</ui-button></router-link>
           <router-link to="/about"><ui-button raised>Gérez les catégories</ui-button></router-link>
-
+          <router-link to="/upload"><ui-button raised>Ajouter une photo</ui-button></router-link>
 
     </div>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
